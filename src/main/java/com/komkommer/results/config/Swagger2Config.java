@@ -1,4 +1,4 @@
-package com.komkommer.results;
+package com.komkommer.results.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
