@@ -89,10 +89,9 @@
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>4.3.0</version>
 				<configuration>
-					<repoToken>hfmOxz55eOJWNqyE5EvTA7RVnoeKLQniT</repoToken>
 					<sourceEncoding>UTF-8</sourceEncoding>
 					<sourceDirectories>
-						<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+						<sourceDirectory>./src/main/java</sourceDirectory>
 					</sourceDirectories>
 				</configuration>
 			</plugin>
