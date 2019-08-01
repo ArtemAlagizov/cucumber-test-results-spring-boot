@@ -1,8 +1,5 @@
-# spring-boot-template
-
-Spring boot dockerized service template with an example.
-
-Loosely based on https://dzone.com/articles/spring-boot-2-restful-api-documentation-with-swagg
+[![Build Status](https://travis-ci.org/ArtemAlagizov/cucumber-test-results-spring-boot.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/cucumber-test-results-spring-boot)
+[![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/cucumber-test-results-spring-boot.svg)](https://coveralls.io/github/ArtemAlagizov/cucumber-test-results-spring-boot?branch=master)
 
 # Usage with Docker:
 ## Prerequisites:
