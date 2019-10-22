@@ -18,11 +18,11 @@ import java.util.List;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/cucumber-report")
-public class EndPointController {
+public class CucumberReportController {
     private ReportService reportService;
 
     @Autowired
-    protected EndPointController(ReportService reportService) {
+    protected CucumberReportController(ReportService reportService) {
         this.reportService = reportService;
     }
 

@@ -18,9 +18,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 @RunWith(MockitoJUnitRunner.class)
-public class EndPointControllerTest {
+public class CucumberReportControllerTest {
     @InjectMocks
-    private EndPointController endPointController;
+    private CucumberReportController cucumberReportController;
 
     @Mock
     private ReportService reportService;
@@ -35,7 +35,7 @@ public class EndPointControllerTest {
 
     @Test
     public void shallCallGetAllReportElementsOfReportServiceWhenGetAllReportElementsIsCalled() {
-        endPointController.getAllReportElements();
+        cucumberReportController.getAllReportElements();
 
         verify(reportService, times(1)).getAllReportElements();
     }
@@ -45,14 +45,14 @@ public class EndPointControllerTest {
         List<ElementList> elementLists = new ArrayList<>();
         String dateTimeOfReportCreation = "01-01-2019";
 
-        endPointController.createReport(elementLists, dateTimeOfReportCreation);
+        cucumberReportController.createReport(elementLists, dateTimeOfReportCreation);
 
         verify(reportService, times(1)).createReport(elementLists, dateTimeOfReportCreation);
     }
 
     @Test
     public void shallCallGetDateTimeOfReportCreationOfReportServiceWhenGetDateTimeOfReportCreationIsCalled() {
-        endPointController.getTimestampOfReportCreation();
+        cucumberReportController.getTimestampOfReportCreation();
 
         verify(reportService, times(1)).getDateTimeOfReportCreation();
     }
@@ -60,7 +60,7 @@ public class EndPointControllerTest {
     @Test
     public void shallCallSendCucumberReportStatusThroughWsOfReportServiceWhenGetTimestampOfReportCreationIsCalled() {
         String status = "cucumber_report_ready";
-        endPointController.sendCucumberReportStatusThroughWs(status);
+        cucumberReportController.sendCucumberReportStatusThroughWs(status);
 
         verify(this.template, times(1)).convertAndSend("/topic/eventToClient", status);
     }
