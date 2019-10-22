@@ -5,6 +5,6 @@ COPY pom.xml /usr/src/komkommer-spring-boot
 
 RUN mvn -f /usr/src/komkommer-spring-boot/pom.xml install
 
-FROM openjdk:8
+FROM openjdk:8-jre-alpine
 
 COPY --from=BUILD /usr/src/komkommer-spring-boot/target/*.jar  /app.jar
