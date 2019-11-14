@@ -11,7 +11,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Rest controller, provides /cucumber-report endpoint
+ * Rest controller, provides /deployment-data endpoint
  */
 @CrossOrigin("*")
 @RestController
