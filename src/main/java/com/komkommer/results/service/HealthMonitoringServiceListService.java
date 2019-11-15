@@ -29,6 +29,7 @@ public class HealthMonitoringServiceListService {
                 .stream()
                 .map(service -> {
                     service.setHealthCheckUrl(service.getHealthCheckUrl().replace("{BACKEND_IP}", healthMonitoringServiceList.getBackendIp()));
+                    service.setSwaggerUrl(service.getSwaggerUrl().replace("{BACKEND_IP}", healthMonitoringServiceList.getBackendIp()));
 
                     return service;
                 })
