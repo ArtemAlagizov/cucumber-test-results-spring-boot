@@ -5,7 +5,7 @@
 
 backend for [cucumber-test-results](https://github.com/ArtemAlagizov/cucumber-test-results)
 
-# Usage without Docker:
+# Usage:
 * Swagger is accessible here (once the app is started):
   ````
   http://localhost:8080/swagger-ui.html
